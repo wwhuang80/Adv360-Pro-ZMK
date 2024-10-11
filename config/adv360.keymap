@@ -49,7 +49,7 @@
             tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 6>;    // <---[[right-hand keys]]
+            hold-trigger-key-positions = <0 1 2 3 4 5 6>;    // <---[[left-hand keys]]
         };
   };
     keymap {
@@ -60,7 +60,7 @@
             bindings = <
       &kp EQUAL     &kp N1          &kp N2           &kp N3        &kp N4  &kp N5                  &mo 3                                                                            &mo 3  &kp N6        &kp N7     &kp N8        &kp N9         &kp N0  &kp MINUS
         &kp TAB      &kp Q           &kp W            &kp F         &kp P   &kp B                  &none                                                                            &none   &kp J         &kp L      &kp U         &kp Y  &kp SEMICOLON   &kp BSLH
-        &kp ESC      &kp A           &kp R            &kp S         &kp T   &kp G                  &none  &kp LCTRL      &kp LALT                  &kp RALT    &kp RCTRL            &none   &kp M         &kp N      &kp E         &kp I          &kp O    &kp SQT
+        &kp ESC      &lh_pht LEFT_GUI A &lh_pht LALT R &lh_pht LCTRL S &lh_pht LEFT_SHIFT T   &kp G                  &none  &kp LCTRL      &kp LALT                  &kp RALT    &kp RCTRL            &none   &kp M         &rh_pht RIGHT_SHIFT N      &rh_pht RCTRL E         &rh_pht RALT I &rh_pht RIGHT_GUI O    &kp SQT
  &kp LEFT_SHIFT      &kp Z           &kp X            &kp C         &kp D   &kp V                                    &kp LEFT_GUI                  &kp RGUI                                 &kp K         &kp H  &kp COMMA       &kp DOT       &kp FSLH  &kp RSHFT
           &mo 2  &kp GRAVE  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt 6 ESCAPE                    &lt 2 SPACE  &lt 2 TAB         &to 0                     &mo 1  &lt 1 ENTER  &lt 4 BACKSPACE          &lt 5 DELETE   &kp DOWN  &kp UP_ARROW       &kp RBKT      &mo 2
             >;
