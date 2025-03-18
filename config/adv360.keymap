@@ -16,12 +16,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/stp.h>
 #include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/pointing.h>
 
-/ {
-  behaviors {
-    #include "macros.dtsi"
-    #include "version.dtsi"
+{
+    behaviors {
+      #include "macros.dtsi"
+      #include "version.dtsi"
 
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
@@ -56,13 +58,14 @@
         compatible = "zmk,keymap";
 
 
+
         default_layer {
             bindings = <
       &kp EQUAL     &kp N1          &kp N2           &kp N3        &kp N4  &kp N5                  &mo 3                                                                            &mo 3  &kp N6        &kp N7     &kp N8        &kp N9         &kp N0  &kp MINUS
         &kp TAB      &kp Q           &kp W            &kp F         &kp P   &kp B                  &none                                                                            &none   &kp J         &kp L      &kp U         &kp Y  &kp SEMICOLON   &kp BSLH
         &kp ESC      &lh_pht LEFT_GUI A &lh_pht LALT R &lh_pht LCTRL S &lh_pht LEFT_SHIFT T   &kp G                  &none  &kp LCTRL      &kp LALT                  &kp RALT    &kp RCTRL            &none   &kp M         &rh_pht RIGHT_SHIFT N      &rh_pht RCTRL E         &rh_pht RALT I &rh_pht RIGHT_GUI O    &kp SQT
  &kp LEFT_SHIFT      &kp Z           &kp X            &kp C         &kp D   &kp V                                    &kp LEFT_GUI                  &kp RGUI                                 &kp K         &kp H  &kp COMMA       &kp DOT       &kp FSLH  &kp RSHFT
-          &mo 2  &kp GRAVE  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt 6 ESCAPE                    &lt 2 SPACE  &lt 2 TAB         &to 0                     &mo 1  &lt 1 ENTER  &lt 4 BACKSPACE          &lt 5 DELETE   &kp DOWN  &kp UP_ARROW       &kp RBKT      &mo 2
+          &mo 2  &kp GRAVE  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt 6 ESCAPE                    &lt 2 SPACE  &lt 2 TAB         &to 0                     &mo 1  &lt 1 BACKSPACE &lt 4 ENTER  &lt 5 DELETE   &kp DOWN  &kp UP_ARROW       &kp RBKT      &mo 2
             >;
         };
 
@@ -82,7 +85,7 @@
  &trans  &trans  &trans  &trans  &trans  &trans             &none                                                             &none    &kp K_REDO  &kp K_PASTE     &kp K_COPY    &kp K_CUT  &kp K_UNDO    &none
  &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                  &trans     &trans          &none  &kp CAPSLOCK     &kp LEFT       &kp DOWN       &kp UP   &kp RIGHT   &trans
  &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                              &kp INSERT     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP     &kp END   &trans
- &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &kp ENTER  &kp BACKSPACE                    &kp DEL         &trans       &trans      &trans   &trans
+ &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &kp BACKSPACE  &kp ENTER                    &kp DEL         &trans       &trans      &trans   &trans
             >;
         };
 
